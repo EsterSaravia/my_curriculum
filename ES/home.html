@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Curriculum</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('fondo.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.zap{
+  background-image: url('zap.jpg');
+  background-position: center;
+  background-size: cover;
+  background-size: 60px;
+  border-radius: 50%;
+}
+.email{
+  background-image: url('email.jpg');
+  background-position: center;
+  background-size: cover;
+  background-size: 60px;
+  border-radius: 50%;
+}
+
+h1.text{
+  animation: typing-animation 5s steps(40) infinite;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white; /* Cambia el color de la línea de escritura */
+  font-size: 2.0rem;
+}
+@keyframes typing-animation {
+  from { width: 0; }
+  to { width: 105%; }
+}
+.toast{
+  align-items: center;
+  background-color: white;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  opacity: 1; /* La tostada inicialmente será invisible */
+  transition: opacity 0.3s ease-in-out; /* Agregamos una transición para la aparición y desaparición */
+}
+.bubble {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  background-color:  #C0D9D9;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="toast w3-card w3-topcenter w3-text-black" style="position:fixed;top:30px;left:50%;width:200px;height:50px;z-index:9999;display:none" id="toastContainer">
+  <div class="w3-button" style="z-index:9999;display:flex" onclick="closeToast()">X</div>
+    Olá, Seja Bem-vino!
+</div>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xxlarge">
+    <a href="https://docs.google.com/document/d/1UC1Dpe5tS5ltHGfqPEuTKu0jpP9mKLNoe9f4oYIkA3k/edit?usp=drive_link"  target="_blank">Curriculum</a>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <h1 class="text w3-xxlarge w3-animate-top w3-center">Ester Linderos Saravia</h1>
+    <hr class="w3-border-black" style="margin:auto;width:40%">
+    <p class="text w3-large w3-center">Salvador, Bahia</p>
+  </div>
+  <!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left w3-text-black" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">X</a>
+  <a href="home.html" onclick="w3_open()" class="w3-bar-item w3-button">Home</a>
+  <a href="education.html" onclick="w3_open()" class="w3-bar-item w3-button">Formaçâo Acadêmica</a>
+  <a href="experience.html" onclick="w3_open()" class="w3-bar-item w3-button">Experência Profissional</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-button w3-padding-16 w3-right w3-xxlarge" onclick="w3_open()">☰</div>
+
+  <h2 class="w3-display-bottomleft w3-padding-large w3-x-large">
+    Objetivo <p class="w3-large w3-bottomleft">Data Sciencie - Desenvolvedor</p>
+  </h2>
+
+<div class="w3-display-bottomrigth w3-padding-large" style="position:absolute;bottom:20px;right:20px;display:flex">
+    <!-- Icono de WhatsApp -->
+  <div class="zap w3-button" style="width: 60px;height:60px;border-radius:50%;box-shadow:02px5pxrgba(0, 0, 0, 0.2);margin-right: 10px" onclick="redirectToWhatsApp()">
+    <i class="fa fa-whatsapp" style="color:white;font-size:24px"></i>
+  </div>
+
+    <!-- Icono de email -->
+  <div class="email w3-button" style="width: 60px;height:60px;border-radius:50%;box-shadow:02px5pxrgba(0, 0, 0, 0.2);margin-right: 10px" onclick="redirectToEmail()">
+    <i class="fa fa-envelope" style="color:white;font-size:24px"></i>
+  </div>
+</div>
+</div>
+
+<script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  // Función para redireccionar al número de WhatsApp correspondiente
+  function redirectToWhatsApp() {
+    var phoneNumber = "71 999344814"; // Reemplaza con el número de teléfono sin el prefijo del país (+)
+    var message = "Olá, obrigada por me contactar!!"; // Mensaje inicial (opcional)
+
+    var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  }
+// Función para redireccionar al formulario de contacto
+  function redirectToEmail() {
+      var emailSubject = "Emprego"; // Asunto del correo (opcional)
+  
+      var mailtoLink = "mailto:esterlsaravia@gmail.com?subject=" + encodeURIComponent(emailSubject);
+        window.location.href = mailtoLink;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const toastContainer = document.getElementById('toastContainer');
+
+    // Mostrar la tostada automáticamente al cargar la página
+    toastContainer.style.display = 'flex';
+  });
+
+    // Función para cerrar la tostada al hacer clic en el botón "X"
+  function closeToast() {
+    const toastContainer = document.getElementById('toastContainer');
+    toastContainer.style.display = 'none';
+  }
+
+function createBubble() {
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  document.body.appendChild(bubble);
+
+  // Asignar posición y tamaño aleatorio a la burbuja
+  const position = Math.random() * window.innerWidth; // Altura aleatoria entre 0 y 100%
+  bubble.style.left = `${position}px`;
+  
+       // Variables para controlar el movimiento y eliminación de la burbuja
+  const startTime = Date.now();
+  const duration = 3000; // Duración de vida de la burbuja (3 segundos)
+  const bottomLimit = -20; // Altura en la que la burbuja desaparece en la parte superior
+
+// Función de actualización para mover la burbuja
+function updateBubble() {
+  const currentTime = Date.now();
+  const elapsedTime = currentTime - startTime;
+  const progress = elapsedTime / duration;
+
+  if (progress < 1) {
+      const bottomPosition = window.innerHeight * progress; // Movimiento hacia arriba
+      bubble.style.bottom = `${bottomPosition}px`;
+      requestAnimationFrame(updateBubble);
+  } else {
+    document.body.removeChild(bubble); // Eliminar la burbuja cuando termine el tiempo de vida
+  }
+}
+
+requestAnimationFrame(updateBubble);
+}   
+
+// Generar burbujas periódicamente
+setInterval(createBubble, 1000); // Cambiar 1000 a un valor menor para más
+
+  </script>
+
+
+</body>
+</html>

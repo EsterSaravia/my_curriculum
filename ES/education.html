@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Curriculum</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h3 {font-family: "Karma", sans-serif}
+body, html {height: 100%} 
+.w3-bar-block .w3-bar-item {padding: 20px}
+.bgimg {
+    background-image: url('fondo.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .zap{
+    background-image: url('zap.jpg');
+    background-position: center;
+    background-size: cover;
+    background-size: 60px;
+    border-radius: 50%;
+  }
+  .email{
+    background-image: url('email.jpg');
+    background-position: center;
+    background-size: cover;
+    background-size: 60px;
+    border-radius: 50%;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+</style>
+</head>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left w3-text-black" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-bar-item w3-button">X</a>
+        <a href="home.html" onclick="w3_open()" class="w3-bar-item w3-button">Home</a>
+        <a href="education.html" onclick="w3_open()" class="w3-bar-item w3-button">Formação Acadêmica</a>
+        <a href="experience.html" onclick="w3_open()" class="w3-bar-item w3-button">Experência Profissional</a>
+      </nav>
+    <div class="w3-button w3-padding-16 w3-right w3-xxlarge" onclick="w3_open()">☰</div>
+      <h1 class="w3-center w3-padding-16 w3 w3-xlarge">Formaçâo Acadêmica</h1>
+    
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="card">
+      <div class="card w3-third" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="in.jpg" alt="IN" style="width:100%">
+        <h3>Infinity School </h3>
+        <p>Data Sciencie.</p>
+        <p>De 2022 Até 2023.</p>
+      <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Nesta Instituição aprendi e desenvolver habilidades para manipular ferramentas tecnológicas e de inteligência artificial como: Linguagem de Programação Python, Modules, Matplotlib, R, Machine Learning, MySQL</p>
+      </details>
+      </div>
+      <div class="card w3-third" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="ip.jpg" alt="IP" style="width:100%">
+        <h3>Instituto Profesional de Chile</h3>
+        <p>Preparador Fisico e Técnico Esportivo.</p>
+        <p>De 2016 Até 2019.</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Nesta instituição desenvolvi competência em Gestão de Projetos, planejamento e desenvolvimento de treinamento em atividades de grupo e individuais em diferentes disciplinas desportivas, atividades físicas e recreativo.</p>
+      </details>
+      </div>
+      <div class="card w3-third" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="liceo.jpg" alt="LIC" style="width:100%">
+        <h3>Liceo Técnico Jose Maº Narbona Cortes</h3>
+        <p>Gastronomia.</p>
+        <p>De 2002 Até 2005.</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Nesta escola secundária desenvolver habilidades de o Empreendedorismo e de diferentes Técnicas culinárias e a Produção de pratos nacionais e internacionais, padaria e pastelaria.</p>
+      </details>
+      </div>
+    </div>
+      <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="card w3-quarter" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="pbi.jpg" alt="pbi" style="width:100%">
+        <h3>Power BI.</h3>
+        <p>De julho/2023 Até aAgosto/2023.</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Este curso de especialização é para ser capaz de fornecer a melhor Qualidade dos dados e Insights.</p>
+      </details>
+      </div>
+      <div class="card w3-quarter" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="api.jpg" alt="api" style="width:100%">
+        <h3>Flask e FastAPI</h3>
+        <p>De Maio/2023 Até Julho/2023.</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Este curso de especialização aprendi a criar sites, aplicativos web e APIs seguras, documentadas e testáveis de maneira eficiente.</p>
+      </details>
+      </div>
+      <div class="card w3-quarter" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="hc.jpg" alt="hc" style="width:100%">
+        <h3>HTML5 e CSS3</h3>
+        <p>De Junho/2023 Até Julho/2023 .</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Este curso de especialização aprendi as novas funcionalidades de linguagem de marcação, como multimídia, novas tags, elementos, suporte nativo a áudio e vídeo e novas APIs
+            com suporte de design responsivo e pode ser dividido em módulos.
+          </p>
+      </details>
+      </div>
+      <div class="card w3-quarter" style="box-shadow: 3px 3px 3px black;position:relative">
+        <img src="auxi.jpg" alt="aux" style="width:100%">
+        <h3>Auxiliar Administrativo</h3>
+        <p>Instituto Pravencer-Fevereiro/2023.</p>
+        <details>
+          <summary>Clique aqui e saiba mais!</summary>
+          <p>Este curso de especialização aprendi competências básicas e intermedias em programas como Word, Excel e Power Point.
+             Aprimorando habilidades de comunicaçao, organizaçao, gestâo de tempo eficaz e trabalhar em equipa.</p>
+      </details>
+      </div>
+    </div>
+</div>
+   <div class="w3-display-topleft w3-padding-large" style="position:relative;bottom:20px;right:20px;display:flex">
+    <!-- Icono de WhatsApp -->
+  <div class="zap w3-button" style="width: 60px;height:60px;border-radius:50%;box-shadow:02px5pxrgba(0, 0, 0, 0.2);margin-right: 10px" onclick="redirectToWhatsApp()">
+    <i class="fa fa-whatsapp" style="color:white;font-size:24px"></i>
+  </div>
+
+    <!-- Icono de email -->
+  <div class="email w3-button" style="width: 60px;height:60px;border-radius:50%;box-shadow:02px5pxrgba(0, 0, 0, 0.2);margin-right: 10px" onclick="redirectToEmail()">
+    <i class="fa fa-envelope" style="color:white;font-size:24px"></i>
+  </div>
+</div>
+</div>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  // Función para redireccionar al número de WhatsApp correspondiente
+    function redirectToWhatsApp() {
+        var phoneNumber = "71 999344814"; // Reemplaza con el número de teléfono sin el prefijo del país (+)
+        var message = "Olá, obrigada por me contactar!!"; // Mensaje inicial (opcional)
+
+        var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+        window.open(url, "_blank");
+    }
+    // Función para redireccionar al formulario de contacto
+    function redirectToEmail() {
+        var emailSubject = "Emprego"; // Asunto del correo (opcional)
+  
+        var mailtoLink = "mailto:esterlsaravia@gmail.com?subject=" + encodeURIComponent(emailSubject);
+        window.location.href = mailtoLink;
+    }
+</script>
+    
+</body>
+</html> 
